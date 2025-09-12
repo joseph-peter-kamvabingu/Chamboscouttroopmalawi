@@ -28,10 +28,328 @@ html, body {
   box-sizing: border-box;
 }
 
+#chambo-projects {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  gap: 20px;
+}
+
+.project-card .project-image {
+  flex: 0 0 150px;
+  max-width: 150px;
+}
+
+.project-card .project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card .project-content {
+  flex: 1;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-card.pending {
+  border-left: 5px solid #f39c12;
+}
+
+/* Mobile layout: stack image above text */
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .project-card .project-image {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-card .project-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .project-card h3 {
+    font-size: 1.2em;
+  }
+
+  .project-card p {
+    font-size: 0.95em;
+  }
+}
+
+
+/* Section Styling */
+#chambo-badges,
+#badge-exchange {
+  padding: 60px 20px;
+  background-color: #fefefe;
+}
+
+.section-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.section-intro {
+  font-size: 1em;
+  text-align: center;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Badge Grid Layout */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Badge Card */
+.badge-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Badge Image */
+.badge-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Badge Info */
+.badge-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.badge-info p {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Button Styling */
+.badge-button-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.impact-button {
+  display: inline-block;
+  background-color: #007b5e;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.impact-button:hover {
+  background-color: #005f47;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  .badge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge-card {
+    padding: 15px;
+  }
+
+  .badge-image {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .badge-info h3 {
+    font-size: 1.1em;
+  }
+
+  .badge-info p {
+    font-size: 0.9em;
+  }
+
+  .impact-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
 /* Ensure all elements respect box sizing */
 *, *::before, *::after {
   box-sizing: inherit;
 }
+#contact-us {
+  background-color: var(--app-gray-section);
+  padding: 80px 20px;
+}
+
+.page-title h1 {
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--app-title-color);
+  margin-bottom: 15px;
+}
+
+.info {
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.contact-input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid rgb(218, 225, 227);
+  border-radius: 5px;
+  font-weight: 400;
+  padding-left: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contact-input-message {
+  width: 100%;
+  border: 1px solid rgb(218, 225, 227);
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 10px;
+  font-size: 16px;
+  min-height: 120px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.contact-input:focus,
+.contact-input-message:focus {
+  border-color: var(--app-button-hover-text-color);
+  outline: none;
+}
+
+.send-btn {
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--app-button-text-color);
+  background-color: var(--app-button-background-color);
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(99 102 241 / 90%);
+  border: 2px solid var(--app-button-background-color);
+  margin: 20px auto;
+  transition: all 0.25s ease-in-out;
+}
+
+.send-btn:hover {
+  color: var(--app-button-hover-text-color);
+  background-color: var(--app-button-hover-background-color);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .contact-form form {
+    align-items: center;
+  }
+
+  .contact-input,
+  .contact-input-message,
+  .send-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .info {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+}
+
+<section id="contact-us">
+  <div class="container">
+    <div class="page-title">
+      <h1>Contact CHAMBO Scout Troop</h1>
+    </div>
+
+    <p class="info">
+      We’re here to connect. Whether you're a fellow Scout, youth organization, school, or supporter—reach out to us directly and let’s build something meaningful together.
+      <br><br>
+      📧 <strong>Email:</strong> <a href="mailto:chamboscouttroop@gmail.com">chamboscouttroop@gmail.com</a><br>
+      📧 <strong>CC:</strong> <a href="mailto:josephpeterkamvabingu@gmail.com">josephpeterkamvabingu@gmail.com</a><br>
+      📱 <strong>WhatsApp:</strong> <a href="https://wa.me/265992954281">+265 992 954 281</a> | <a href="https://wa.me/265994792163">+265 994 792 163</a>
+    </p>
+
+    <div class="contact-details">
+      <p><strong>Address:</strong> CHAMBO Scout Troop HQ, Lilongwe, Malawi</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100063766008860&mibextid=LQQJ4d" target="_blank">Visit our page</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/josephpeterkamvabingu" target="_blank">Connect with Joseph</a></p>
+    </div>
+
+    <p class="info">
+      ✉️ To collaborate on SDG projects, badge exchanges, or youth-led initiatives, just send us an email. We reply fast, and we’re always ready to partner.
+    </p>
+  </div>
+</section>
 
 
 body {
@@ -1321,185 +1639,6 @@ h1.h-title {
   color: #333;
 }
 
-/* Card Description */
-.board-para {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-  transition: color 0.3s ease;
-}
-
-.board:hover .board-para {
-  color: #555;
-}
-
-#contact-us {
-    background-color: var(--app-gray-section);
-    padding: 80px 0;
-    height: auto;
-}
-
-
-#contact-us .col-bg {
-    height: auto;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-#contact-us .col-1 {
-    width: calc(50% - 10px);
-    flex-grow: 1 1 auto;
-}
-
-#contact-us .col-2 {
-    width: calc(50% - 10px);
-    padding-left: 40px;
-    flex-grow: 1 1 auto;
-}
-
-
-#contact-us .info {
-    margin-left: 80px;
-}
-
-#contact-us .col-2 p {
-    line-height: 40px;
-}
-
-
-
-#contact-us .col-2 > div {
-    padding-bottom: 20px;
-}
-
-#contact-us .col2 p {
-    text-align: left;
-    letter-spacing: 0.03em; 
-    line-height: 1.6;
-    margin-left: 40px;
-}
-
-#contact-us h1 {
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 40px;
-    text-align: center;
-    color: var(--app-title-color);
-    margin-bottom: 15px;
-}
-
-#icon2, #icon3 {
-    font-size: 18px;
-    color: var(--app-button-background-color);
-    transition: all 0.25s ease-in-out;
-}
-
-#contact-us p a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#contact-us p a:hover {
-    color: var(--app-button-hover-text-color);
-}
-
-.submit-feedback {
-    color: var(--app-button-background-color);
-    display: none;
-    font-size: 18px;
-}
-
-.invalid-feedback {
-    color: #ff0000;
-    display: none;
-    font-size: 14px;
-}
-
-@media (max-width:768px) {
-    #contact-us .col-1, #contact-us .col-2  {
-        width: 100%;
-        padding: 0px;
-    }
-
-    #contact-us .col-2  {
-        margin-top: 30px;
-    }
-
-    #contact-us .col-1  {
-        margin-top: 35px;
-    }
-    
-    #contact-us .info {
-        margin-left: 30px;
-    }
-
-}
-
-@media (max-width: 480px) {
-    #contact-us .col-1, #contact-us .col-2  {
-        width: 100%;
-        padding: 0px;
-    }
-
-    #contact-us .col-2  {
-        margin-top: 30px;
-    }
-
-    #contact-us .col-1  {
-        margin-top: 35px;
-    }
-
-    #contact-us .info {
-        margin-left: 30px;
-    }
-}
-
-#contact-us form {
-    font-size: 0;
-    width: 100%;
-}
-
-.contact-input {
-    width: 100%;
-    height: 46px;
-    border: 1px solid;
-    border-color: rgb(218, 225, 227);
-    border-radius: 5px;
-    font-weight: 400;
-    margin: 10px 0px;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-.contact-input:focus, .contact-input:hover {
-    border-color: var(--app-button-hover-text-color);
-}
-
-.send-btn {
-    width: 170px; 
-    height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    color: var(--app-button-text-color);
-    background-color: var(--app-button-background-color);
-    box-shadow: 0 0.5rem 1.125rem -0.5rem rgb(99 102 241 / 90%);
-    border: 2px solid;
-    border-color: var(--app-button-background-color);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: all 0.25s ease-in-out; 
-}
-
-.send-btn:hover {
-    color: var(--app-button-hover-text-color);
-    background-color: var(--app-button-hover-background-color);
-}
 
 /* ------------------------------- */
 /* Introduction                    */
