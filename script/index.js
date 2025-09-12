@@ -1,7 +1,6 @@
 'use strict';
 
 // Navigation
-document.querySelector("textarea").disabled = true;
 
 
 const navButtonB = document.querySelector('.navbar .fa-bars');
